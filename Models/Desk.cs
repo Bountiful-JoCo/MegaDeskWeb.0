@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -65,12 +66,28 @@ namespace MegaDeskWeb._0.Models
          */
 
         public int DeskID { get; set; }
+        [StringLength(60, MinimumLength=2)]
+        [RegularExpression(@"^[A-Z0-9]+[a-zA-Z0-9""'\s-]*$")]
+
+        [Required]
         public string LastName { get; set; }
+        [StringLength(60, MinimumLength = 2)]
+        [RegularExpression(@"^[A-Z0-9]+[a-zA-Z0-9""'\s-]*$")]
+
+        [Required]
         public string FirstName { get; set; }
+        [Range (24, 96)]
+        [Required]
         public int Width { get; set; }
+        [Range(12, 48)]
+        [Required]
         public int Depth { get; set; }
+        [Range (0,7)]
+        [Required]
         public int Drawers { get; set; }
+        [Required]
         public int RushOrderID { get; set; }
+        [Required]
         public int DeskMaterialID { get; set; }
 
         //Navigation Properties
