@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MegaDeskWeb._0.Models;
 
 namespace MegaDeskWeb._0.Models
 {
@@ -12,7 +13,7 @@ namespace MegaDeskWeb._0.Models
             : base(options)
         {
         }
-
         public DbSet<MegaDeskWeb._0.Models.DeskQuote> DeskQuote { get; set; }
+
     }
 }
